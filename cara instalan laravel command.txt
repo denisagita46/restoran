@@ -1,0 +1,8 @@
+install di git command
+
+- npm install 
+- composer update
+
+apus debuger di ui 
+
+- boostrap -> cache -> packages.php -> //0 => 'Barryvdh\\Debugbar\\ServiceProvider', 

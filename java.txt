@@ -1,0 +1,37 @@
+<script>
+        $(document).on('ready', function (e) {
+            var managerLoaded = false;
+            var supervisorLoaded = false;
+            $("body").on('change', '#role', function (e) {
+                $('.permit-check').prop('checked', false);
+                var role = $("#role").val();
+                var self = $(this);
+                self.attr('disabled', 'disabled');
+                $.ajax({
+                    url: "{{ route('user.roles.abilities')  }}",
+                    type: 'get',
+                    data: {"id" : role},
+                    success: function(response){
+                        $.each(response.data, function (module, abilities) {
+                            $.each(abilities, function(permission, ability) {
+                                console.log(module + ' ' + permission);
+                                if (ability) {
+                                    $('#' + module + '-' + permission).prop('checked', true);
+                                }
+                            })
+                        });
+                        $('#abilities-block').removeClass('hidden');
+                        self.removeAttr('disabled');
+                    },
+                    error: function(response, status) {
+                        console.log('Error');
+                        self.removeAttr('disabled');
+                    }
+                });
+
+
+            });
+
+
+        });
+    </script>
