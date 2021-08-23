@@ -6,7 +6,6 @@
     
 <head>
     <title>Restoran</title>
-
 </head>
 <body>
     <div class="container">
@@ -45,10 +44,9 @@
                 </div>
                 {{-- @if(config('auth.users.registration'))--}}
                         <center><div class="separator">
-                            <p class="change_link">
-                                <a href="{{ route('register') }}" class="to_register"> Silahkan Register terlbih dahulu</a>
-                            </p>
-
+						 <button><a href= "{{ route('register') }}" class="btn btn-default">Register</button><a/>
+						 <button><a href= "{{ route('input_pesenan') }}" class="btn btn-default">Input Pesanan</button><a/>
+                            
                             <div class="clearfix"></div>
                             <br/>
 

@@ -72,8 +72,8 @@
 						<div class="col-md-9 col-sm-9 col-xs-12">
 						<select name="role" class="form-control" id="role">
 							<option>--choose--</option>
-							<option value="admin">admin</option>
-							<option value="user">user</option>
+							<option value="kasir">Kasir</option>
+							<option value="kitchen">kitchen</option>
 						</select>
 						</div>
 					</div>

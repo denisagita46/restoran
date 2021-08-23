@@ -31,29 +31,14 @@
                                    placeholder="{{ __('views.auth.register.input_3') }}"
                                    required/>
                         </div>
-						
-						 <div>
-                            <input type="telepon" name="telepon" class="form-control"
-                                   placeholder="Telepon"
-                                   required/>
-                        </div>
-						
-						<br>
-						<div>
-                            <input type="alamat" name="alamat" class="form-control"
-                                   placeholder="Alamat"
-                                   required/>
-                        </div>
-						</br>
-						
-						<br>
-						<select name="flag" class="form-control" id="flag">
+					
+						<select name="role" class="form-control" id="role">
 							<option>--choose--</option>
-							<option value="0">tidak aktif</option>
-							<option value="1">aktif</option>
+							<option value="kasir">Kasir</option>
+							<option value="kitchen">kitchen</option>
 						</select>
-						</br>
-
+					
+                        <br></br>
                         @if (session('status'))
                             <div class="alert alert-success">
                                 {{ session('status') }}

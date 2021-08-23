@@ -1,13 +1,26 @@
 <?php
+
 namespace App\Http\Controllers\Web;
 
-
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        return view('home');
+        $role = Auth::user()->role;
+        if($role == "kasir"){
+            return redirect()->to('kasir');
+        } else if($role == "kitchen"){
+            return redirect()->to('kitchen');
+        } else {
+            return redirect()->to('logout');
+        }
     }
 }

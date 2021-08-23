@@ -8,12 +8,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="{{ asset('images/img.jpg') }}" alt="">{{ auth()->user()->name }}
+                    <img src="{{ asset('images/img.jpg') }}" alt="">{{ auth()->user()->role }}
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         <li><a href="{{ route('user.logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                        <li><a href=""><i class="fa fa-sign-out pull-right"></i> Profil User</a></li>
+                        <li><a href=""><i class="fa fa-sign-out pull-right"></i> Profil</a></li>
                     </ul>
                    
                 </li>
