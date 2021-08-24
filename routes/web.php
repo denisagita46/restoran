@@ -30,7 +30,6 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/kasir', 'DashboardKasirController@dashboard')->name('kasir');
 		
 	/* menu */
-	Route::get('/kasir', 'DashboardKasirController@dashboard')->name('kasir');
 	Route::get('/menu', 'Menucontroller@index')->name('menu');
 	Route::get('/form_menu_create', 'Menucontroller@create')->name('form_menu_create');
 	Route::post('/menu_save', 'Menucontroller@save')->name('menu_save');
