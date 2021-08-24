@@ -3,7 +3,7 @@
   array (
     'providers' => 
     array (
-      0 => 'Arcanedev\\LogViewer\\LogViewerServiceProvider',
+      
     ),
   ),
   'barryvdh/laravel-debugbar' => 
