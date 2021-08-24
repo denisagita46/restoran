@@ -66,5 +66,5 @@ Route::middleware(['auth','revalidate'])->group(function () {
 
 });
 
-/* input pesanan di depan login */
-Route::get('input_pesenan', 'PesenanController@index')->name('input_pesenan');
+	/* input pesanan di depan login */
+	Route::get('input_pesenan', 'PesenanController@index')->name('input_pesenan');
