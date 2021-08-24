@@ -19,12 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','revalidate'])->group(function () {
 
 	Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 	Route::get('/logout', 'Auth\LoginController@logout')->name('user.logout');
 	
-    Route::middleware(['kasir'])->group(function () {
+        Route::middleware(['kasir'])->group(function () {
 	/* menu */
 	Route::get('/kasir', 'Menucontroller@index')->name('kasir');
 	Route::get('/menu', 'Menucontroller@index')->name('menu');
@@ -53,7 +53,7 @@ Route::middleware(['auth'])->group(function () {
 
     });
 
-    Route::middleware(['kitchen'])->group(function () {
+       Route::middleware(['kitchen'])->group(function () {
        Route::get('kitchen', 'DashbordKitchenController@index')->name('kitchen');	
 		
     });   
