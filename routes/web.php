@@ -25,6 +25,10 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/logout', 'Auth\LoginController@logout')->name('user.logout');
 	
         Route::middleware(['kasir'])->group(function () {
+	
+	/* dashboard kasir */
+	Route::get('/kasir', 'DashboardKasirController@dashboard')->name('kasir');
+		
 	/* menu */
 	Route::get('/kasir', 'DashboardKasirController@dashboard')->name('kasir');
 	Route::get('/menu', 'Menucontroller@index')->name('menu');
@@ -54,6 +58,7 @@ Route::middleware(['auth','revalidate'])->group(function () {
     });
 
        Route::middleware(['kitchen'])->group(function () {
+       /* dashboard kitchen */
        Route::get('kitchen', 'DashbordKitchenController@index')->name('kitchen');	
 		
     });   
@@ -61,4 +66,5 @@ Route::middleware(['auth','revalidate'])->group(function () {
 
 });
 
+/* input pesanan di depan login */
 Route::get('input_pesenan', 'PesenanController@index')->name('input_pesenan');
