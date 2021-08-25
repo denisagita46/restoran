@@ -53,6 +53,7 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/meja', 'Mejacontroller@index')->name('meja');	
 	Route::get('/form_meja_create', 'Mejacontroller@create')->name('form_meja_create');
 	Route::post('/meja_save', 'Mejacontroller@save')->name('meja_save');
+	Route::get('/hapus/{id_meja}', 'Mejacontroller@hapus');
 
     });
 
