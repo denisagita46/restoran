@@ -48,11 +48,12 @@
                                     <th>{{ $k+1 }}</th>
                                         <th scope="row">{{ $table_meja->nomor_meja }}</th>
                                         <td>{{ $table_meja->lokasi }}</td>
-							        <td><center> 
-									    <a data-toggle="modal" id="smallButton" data-target="#smallModal" href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
-									    <a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
-									    <a href=""  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
-								    </center></td>
+					<td>
+					<center> 
+						<a href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
+						<a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
+						<a href="/hapus/{{ $table_meja->id_meja }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
+					</center></td>
                                 </tr>
                             @endforeach
                         </tbody>
