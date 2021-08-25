@@ -22,15 +22,24 @@ class Mejacontroller extends Controller
         return view('meja.add_meja');
     }
     
-    public function save(request $request) {
+    public function save(request $request) 
+    {
 	
-		$table_meja = new table_meja;
+	$table_meja = new table_meja;
 		
-		$table_meja->nomor_meja = $request->input('nomor_meja');
-		$table_meja->lokasi = $request->input('lokasi');
-		$table_meja->save();
+	$table_meja->nomor_meja = $request->input('nomor_meja');
+	$table_meja->lokasi = $request->input('lokasi');
+	$table_meja->save();
 
-        return redirect(route('meja'))->with(['success' => "meja created successfully!"]);
-	    
+       	return redirect(route('meja'))->with(['success' => "meja created successfully!"]);    
     }
+	
+	public function hapus($id_meja)
+	{
+    	
+	$table_meja = table_meja::find($id_meja);
+    	$table_meja->delete();
+    	
+	return redirect(route('meja'))->with(['success' => "delete successfully!"]);
+	}
 }
