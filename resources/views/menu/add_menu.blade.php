@@ -35,12 +35,12 @@
 						</div>
 					</div>
 					
-					<!-- <div class="form-group">
-						<label for="flag"  class="control-label col-md-3 col-sm-3 col-xs-12">Kategori Menu</label>
-						<div class="col-md-9 col-sm-9 col-xs-12">
-						<select id="kategori_menu" name="kategori_menu" class="form-control"><option>--choose--</option></select>
-						</div>
-					</div> -->
+		     <!-- <div class="form-group">
+			  	<label for="flag"  class="control-label col-md-3 col-sm-3 col-xs-12">Kategori Menu</label>
+				<div class="col-md-9 col-sm-9 col-xs-12">
+					<select id="kategori_menu" name="kategori_menu" class="form-control"><option>--choose--</option></select>
+				</div>
+			  </div> -->
 					
                     <div class="form-group">
                         <label for="nama_menu" class="control-label col-md-3 col-sm-3 col-xs-12">Nama Menu</label>
@@ -69,9 +69,9 @@
                     <div class="form-group">
                         <label for="deskripsi" class="control-label col-md-3 col-sm-3 col-xs-12">Deskripsi</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input  maxlength="11" type="text" name="deskripsi" id="deskripsi"
-                                    value="{!! old('deskripsi') !!}"  class="form-control"
-                                    required="required" placeholder="Deskripsi">
+                            <textarea  name="deskripsi" id="deskripsi"
+                            value="{!! old('deskripsi') !!}"  class="form-control"
+                            required="required" placeholder="deskripsi"></textarea>
                         </div>
                         @if($errors->has('deskripsi'))
                             <span class="text-danger">{!! $errors->first('deskripsi') !!}</span>
