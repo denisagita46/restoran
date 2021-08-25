@@ -38,9 +38,9 @@
                     <div class="form-group">
                         <label for="lokasi" class="control-label col-md-3 col-sm-3 col-xs-12">Lokasi</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input  maxlength="11" type="text" name="lokasi" id="lokasi"
-                                    value="{!! old('nama_menu') !!}"  class="form-control"
-                                    required="required" placeholder="Nama Menu">
+                            <textarea  name="lokasi" id="lokasi"
+                            value="{!! old('lokasi') !!}"  class="form-control"
+                            required="required" placeholder="lokasi"></textarea>
                         </div>
                         @if($errors->has('lokasi'))
                             <span class="text-danger">{!! $errors->first('lokasi') !!}</span>
