@@ -51,8 +51,8 @@
 					<td>
 					<center> 
 						<a href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
-						<a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
-						<a href="/hapus/{{ $table_meja->id_meja }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
+						<a href="/edit/{{ $table_meja->id_meja }}" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
+						<a href="/hapus_meja/{{ $table_meja->id_meja }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
 					</center></td>
                                 </tr>
                             @endforeach
