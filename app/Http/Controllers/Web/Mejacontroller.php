@@ -34,12 +34,28 @@ class Mejacontroller extends Controller
        	return redirect(route('meja'))->with(['success' => "meja created successfully!"]);    
     }
 	
-	public function hapus($id_meja)
+     public function hapus($id_meja)
 	{
-    	
-	$table_meja = table_meja::find($id_meja);
+    	$table_meja = table_meja::find($id_meja);
     	$table_meja->delete();
-    	
-	return redirect(route('meja'))->with(['success' => "delete successfully!"]);
+    	return redirect(route('meja'))->with(['success' => "delete successfully!"]);
+    }
+    
+
+     public function edit_meja($id_meja)
+	{
+        $table_meja = table_meja::find($id_meja);
+        return view('meja.edit_meja',['table_meja' => $table_meja]);
+    }
+    
+     public function update_meja($id_meja, Request $request)
+	{
+	
+		$table_meja = table_meja::find($id_meja);
+		$table_meja->nomor_meja = $request->input('nomor_meja');
+		$table_meja->lokasi = $request->input('lokasi');
+		$table_meja->save();
+		return redirect('meja')->with('info', 'edit succesfuly');
 	}
+	
 }
