@@ -33,9 +33,8 @@
                     <li><a><i class="fa fa-bar-chart-o"></i> Data Master <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{ route('menu') }}">Menu Restoran</a></li>
-							<li><a href="{{ route('pelanggan') }}">Pelanggan</a></li>
                             <li><a href="{{ route('meja') }}">Meja</a></li>	
-							<li><a href="{{ route('pengguna') }}">Pengguna</a></li>							
+			    <li><a href="{{ route('pengguna') }}">Pengguna</a></li>							
                         </ul>
                     </li>
 
