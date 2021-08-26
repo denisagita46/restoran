@@ -35,6 +35,7 @@
                             
                     </fieldset>
                     <center><button type="submit" class="btn btn-primary"><i class="fa fa-save"> Update</i></button>
+		    <a href="{{ route('meja') }}" class="btn btn-primary">Kembali</a>
 	            </form>
 	        </div>
 	    </div>
