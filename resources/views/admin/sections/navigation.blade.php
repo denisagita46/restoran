@@ -40,7 +40,7 @@
 
                     <li><a><i class="fa fa-table"></i> Data Transaksi <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('menu') }}">Data Transaksi</a></li>
+                            <li><a href="{{ route('transaksi') }}">Data Transaksi</a></li>
                         </ul>
                     </li>
 
