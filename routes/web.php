@@ -56,6 +56,10 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/edit/{id_meja}', 'Mejacontroller@edit_meja');
 	Route::put('/edit/update/{id_meja}', 'Mejacontroller@update_meja');
 	Route::get('/view/{id_meja}', 'Mejacontroller@view');
+		
+	/* Transaksi */
+	Route::get('/transaksi', 'Transaksicontroller@index')->name('transaksi');
+	
 
     });
 
