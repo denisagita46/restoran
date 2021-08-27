@@ -10,7 +10,7 @@ use App\Exports\UserExport;
 
 class Mejacontroller extends Controller
 {
-    //
+
     public function index() 
     {
         $table_meja = table_meja::paginate(5);
@@ -40,22 +40,26 @@ class Mejacontroller extends Controller
     	$table_meja->delete();
     	return redirect(route('meja'))->with(['success' => "delete successfully!"]);
     }
+     
+     public function view($id_menu)
+     {
+         $table_meja = table_meja::find($id_menu);
+	  //dd($mobil);
+         return view('meja.view_meja', ['table_meja' => $table_meja]);
+     }
     
-
      public function edit_meja($id_meja)
-	{
+     {
         $table_meja = table_meja::find($id_meja);
         return view('meja.edit_meja',['table_meja' => $table_meja]);
-    }
+     }
     
      public function update_meja($id_meja, Request $request)
-	{
-	
-		$table_meja = table_meja::find($id_meja);
-		$table_meja->nomor_meja = $request->input('nomor_meja');
-		$table_meja->lokasi = $request->input('lokasi');
-		$table_meja->save();
-		return redirect('meja')->with('info', 'edit succesfuly');
-	}
-	
+     {
+           $table_meja = table_meja::find($id_meja);
+	   $table_meja->nomor_meja = $request->input('nomor_meja');
+           $table_meja->lokasi = $request->input('lokasi');
+	   $table_meja->save();
+	   return redirect('meja')->with('info', 'edit succesfuly');
+      }
 }
