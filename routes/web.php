@@ -55,6 +55,7 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::post('/meja_save', 'Mejacontroller@save')->name('meja_save');
 	Route::get('/edit/{id_meja}', 'Mejacontroller@edit_meja');
 	Route::put('/edit/update/{id_meja}', 'Mejacontroller@update_meja');
+	Route::get('/view/{id_meja}', 'Mejacontroller@view');
 
     });
 
