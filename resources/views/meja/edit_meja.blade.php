@@ -11,28 +11,27 @@
                     {{ method_field('PUT') }}
 	                <fieldset>
 		                <legend><center>Edit Form Meja </center></legend>
-			                <div class="form-group">
-                                <label>Nomor_Meja</label>
-                                    <input type="text" name="nomor_meja" class="form-control" placeholder="nomor_meja" value=" {{ $table_meja->nomor_meja }}">
-                                    @if($errors->has('nomor_meja'))
-                                        <div class="text-danger">
-                                            {{ $errors->first('nomor_meja')}}
-                                        </div>
-                                    @endif
-			                </div>
+				
+			        <div class="form-group">
+                                	<label>Nomor_Meja</label>
+                                    	<input type="text" name="nomor_meja" class="form-control" placeholder="nomor_meja" value=" {{ $table_meja->nomor_meja }}">
+                                    	@if($errors->has('nomor_meja'))
+                                        	<div class="text-danger">
+                                            		{{ $errors->first('nomor_meja')}}
+                                        	</div>
+                                    	@endif
+			         </div>
 
-                              <div class="form-group">
-                                <label>Nomor_Meja</label>
-                                    <input type="text" name="lokasi" class="form-control" placeholder="lokasi" value=" {{ $table_meja->lokasi }}">
-                                    @if($errors->has('lokasi'))
-                                        <div class="text-danger">
-                                            {{ $errors->first('lokasi')}}
-                                        </div>
-                                    @endif
-			                </div>
-                            
-			               
-                            
+                              	<div class="form-group">
+                                	<label>Nomor_Meja</label>
+                                    	<input type="text" name="lokasi" class="form-control" placeholder="lokasi" value=" {{ $table_meja->lokasi }}">
+                                    	@if($errors->has('lokasi'))
+                                        	<div class="text-danger">
+                                            		{{ $errors->first('lokasi')}}
+                                        	</div>
+                                        @endif
+			        </div>
+				
                     </fieldset>
                     <center><button type="submit" class="btn btn-primary"><i class="fa fa-save"> Update</i></button>
 		    <a href="{{ route('meja') }}" class="btn btn-primary">Kembali</a>
