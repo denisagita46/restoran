@@ -30,7 +30,7 @@
 							<option>--choose--</option>
 							<option value="makanan">Makanan</option>
 							<option value="minuman">Minuman</option>
-                            <option value="cemilan">Cemilan</option>
+                                                        <option value="cemilan">Cemilan</option>
 						</select>
 						</div>
 					</div>
