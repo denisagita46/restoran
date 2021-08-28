@@ -42,6 +42,7 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/cari', 'UserController@search');
 	Route::get('/hapus/{id}', 'UserController@hapus');
 	Route::get('export_excel', 'UserController@export_excel')->name('export_excel');
+	Route::get('/view_pengguna/{id}', 'UserController@view_pengguna');
 
 	/* pelanggan */
 	Route::get('/pelanggan', 'Pelanggancontroller@index')->name('pelanggan');
