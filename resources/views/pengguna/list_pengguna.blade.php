@@ -20,8 +20,6 @@
 		<a href="{{ route('pengguna_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
                 <a href="{{ route('export_excel') }}" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
 
-                @if(count($users) > 0)
-
                 <div class="title_right">
                     <div class="col-md-2 col-sm-2 form-group pull-right top_search">
                         <div class="input-group">
@@ -52,7 +50,7 @@
 					<td>{{ $user->role }}</td>
                                     </center></td>
 				    <td><center> 
-					<a href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
+					<a href="/view_pengguna/{{ $user->id }}" class="btn btn-primary"><span class="fa fa-check"> View |</a>
 					<a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
 					<a href="/hapus/{{ $user->id }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
 				     </center></td>
@@ -60,8 +58,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                @else
-                @endif
             </div>
 	{{ $users->links() }}
         </div>
