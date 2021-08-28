@@ -16,11 +16,11 @@
                         {{ session('success') }}
                     </div>
                 @endif
+		
+		<a href="{{ route('pengguna_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
+                <a href="{{ route('export_excel') }}" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
 
                 @if(count($users) > 0)
-				
-				<a href="{{ route('pengguna_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
-                <a href="{{ route('export_excel') }}" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
 
                 <div class="title_right">
                     <div class="col-md-2 col-sm-2 form-group pull-right top_search">
@@ -33,14 +33,14 @@
                     </div>
                 </div>
 
-				<table class="table table-bordered">
+		<table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th><center>Name</center></th>
                                 <th><center>Email</center></th>
-								<th><center>Role</center></th>
-							    <th><center>Action</center></th>
+				<th><center>Role</center></th>
+				<th><center>Action</center></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,13 +49,13 @@
                                     <th>{{ $k+1 }}</th>
                                         <th scope="row"> {{ $user->name }}</th>
                                         <td>{{ $user->email }}</td>
-										<td>{{ $user->role }}</td>
+					<td>{{ $user->role }}</td>
                                     </center></td>
-							        <td><center> 
-									    <a data-toggle="modal" id="smallButton" data-target="#smallModal" href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
-									    <a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
-									    <a href="/hapus/{{ $user->id }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
-								    </center></td>
+				    <td><center> 
+					<a href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
+					<a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
+					<a href="/hapus/{{ $user->id }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
+				     </center></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -63,7 +63,7 @@
                 @else
                 @endif
             </div>
-			 {{ $users->links() }}
+	{{ $users->links() }}
         </div>
     </div>
 
