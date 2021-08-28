@@ -16,11 +16,11 @@
                         {{ session('success') }}
                     </div>
                 @endif
+		
+		<a href="{{ route('form_menu_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
+                <a href="" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
 				
                 @if(count($table_menu) > 0)
-
-				<a href="{{ route('form_menu_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
-                <a href="" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
 
                 <div class="title_right">
                     <div class="col-md-2 col-sm-2 form-group pull-right top_search">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-				<table class="table table-bordered">
+		<table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -52,11 +52,11 @@
                                         <td>{{ $menu->nama_menu }}</td>
                                         <td>{{ $menu->harga }}</td>
                                         <td>{{ $menu->deskripsi }}</td>
-							        <td><center> 
-									    <a data-toggle="modal" id="smallButton" data-target="#smallModal" href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
-									    <a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
-									    <a href=""  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
-								    </center></td>
+					<td><center> 
+						<a href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
+					        <a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
+						<a href=""  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
+					</center></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -66,32 +66,7 @@
             </div>
             {{ $table_menu->links() }}
         </div>
-    </div>
-<!-- small modal -->
-<div class="modal fade" id="smallModal" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                   <h1>deni</h1>
-                </div>
-                <div class="modal-body" id="smallBody">
-                    <div>
-                        <!-- the result to be displayed apply here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<script>
-$(document).on('click', '#smallButton', function(event) {
-            event.preventDefault();
-            //alert("tes");
-            $('#smallModal').modal("show");
-
-            timeout: 8000
-        });
-
+    </div>    
 </script>
 
 @endsection
