@@ -17,9 +17,9 @@ class UserController extends Controller
     //for to dashbaord
     public function index() {
 
-		$users = User::paginate(5);
-		return view('pengguna.list_pengguna', compact('users'));
-		//return response()->json($users);
+	$users = User::paginate(5);
+	return view('pengguna.list_pengguna', compact('users'));
+	//return response()->json($users);
 
     }
 
@@ -39,7 +39,7 @@ class UserController extends Controller
     }
 
 	// for add controller 
-    public function save(request $request) {
+    	public function save(request $request) {
 	
 		$user = new user;
 		
