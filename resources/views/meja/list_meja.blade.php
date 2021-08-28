@@ -16,11 +16,11 @@
                         {{ session('success') }}
                     </div>
                 @endif
+		
+		<a href="{{ route('form_meja_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
+		<a href="" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
 
-                 @if(count($table_meja) > 0)
-
-				<a href="{{ route('form_meja_create') }}" class="btn btn-primary"><span class="fa fa-plus"></span> Tambah Data</a>
-                <a href="" class="btn btn-primary"><span class="fa fa-print"></span> Export To Excel</a>
+                @if(count($table_meja) > 0)
 
                 <div class="title_right">
                     <div class="col-md-2 col-sm-2 form-group pull-right top_search">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-				<table class="table table-bordered">
+		<table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
