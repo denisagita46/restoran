@@ -61,9 +61,16 @@ class UserController extends Controller
 	
 	public function hapus($id)
 	{
-    	$user = User::find($id);
-    	$user->delete();
-    	return redirect(route('pengguna'))->with(['success' => "delete successfully!"]);
+    		$user = User::find($id);
+    		$user->delete();
+    		return redirect(route('pengguna'))->with(['success' => "delete successfully!"]);
+	}
+	
+	public function view_pengguna($id)
+	{
+		$user = User::find($id);
+		//dd($mobil);
+		return view('pengguna.view_pengguna', ['user' => $user]);
 	}
 
 
