@@ -34,6 +34,9 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/form_menu_create', 'Menucontroller@create')->name('form_menu_create');
 	Route::post('/menu_save', 'Menucontroller@save')->name('menu_save');
 	Route::get('/cari_menu', 'Menucontroller@search');
+	Route::get('/edit_menu/{id_menu}', 'Menucontroller@edit_menu');
+	Route::put('/edit/update/{id_menu}', 'Menucontroller@update_menu');
+		
 
 	/* pengguna */
 	Route::get('/pengguna', 'UserController@index')->name('pengguna');
