@@ -51,7 +51,7 @@
                                     </center></td>
 				    <td><center> 
 					<a href="/view_pengguna/{{ $user->id }}" class="btn btn-primary"><span class="fa fa-check"> View |</a>
-					<a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
+					<a href="/edit_pengguna/{{ $user->id }}"" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
 					<a href="/hapus/{{ $user->id }}"  onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
 				     </center></td>
                                 </tr>
