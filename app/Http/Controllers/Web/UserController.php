@@ -72,6 +72,27 @@ class UserController extends Controller
 		//dd($mobil);
 		return view('pengguna.view_pengguna', ['user' => $user]);
 	}
+	
+	public function edit_pengguna($id)
+	{
+        	$user = User::find($id);
+        	return view('pengguna.edit_pengguna',['user' => $user]);
+        }
+	
+	public function update_pengguna($id, Request $request)
+	{
+	
+		$user = User::find($id);
+		$user->name = $request->input('name');
+		$user->email = $request->input('email');
+		$user->password = $request->input('password');
+		$user->password = $request->input('password');
+		$user->role = $request->input('role');
+		
+		$user->save();
+		
+		return redirect('pengguna')->with('info', 'edit succesfuly');
+	}
 
 
 }
