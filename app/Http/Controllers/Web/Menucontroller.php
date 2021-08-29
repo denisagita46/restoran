@@ -49,5 +49,31 @@ class Menucontroller extends Controller
         return redirect(route('menu'))->with(['success' => "menu created successfully!"]);
 	    
     }
+    
+    public function hapus($id_menu)
+    {
+    	$table_menu = table_menu::find($id_menu);
+    	$table_menu->delete();
+    	return redirect(route('menu'))->with(['success' => "delete successfully!"]);
+    }
+	
+    public function edit_menu($id_menu)
+    {
+        $table_menu = table_menu::find($id_menu);
+        return view('menu.edit_menu',['table_menu' => $table_menu]);
+    }
+	
+    public function update_menu($id_menu, Request $request)
+    {
+	$table_menu = table_menu::find($id_menu);
+	$table_menu->kategori_menu = $request->input('kategori_menu');
+	$table_menu->nama_menu = $request->input('nama_menu');
+	$table_menu->harga = $request->input('harga');
+	$table_menu->deskripsi = $request->input('deskripsi');
+	$table_menu->save();
+		
+	return redirect('menu')->with('info', 'edit succesfuly');
+     
+    }
 	
 }
