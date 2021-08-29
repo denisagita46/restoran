@@ -46,6 +46,8 @@ Route::middleware(['auth','revalidate'])->group(function () {
 	Route::get('/hapus/{id}', 'UserController@hapus');
 	Route::get('export_excel', 'UserController@export_excel')->name('export_excel');
 	Route::get('/view_pengguna/{id}', 'UserController@view_pengguna');
+	Route::get('/edit_pengguna/{id}', 'UserController@edit_pengguna');
+	Route::put('/edit_pengguna/update/{id}', 'UserController@update_pengguna');
 
 	/* pelanggan */
 	Route::get('/pelanggan', 'Pelanggancontroller@index')->name('pelanggan');
