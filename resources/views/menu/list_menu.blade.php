@@ -52,8 +52,8 @@
                                         <td>{{ $menu->deskripsi }}</td>
 					<td><center> 
 						<a href="" class="btn btn-primary"><span class="fa fa-check"> View |</a>
-					        <a href="" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
-						<a href="" onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
+					        <a href="/edit_menu/{{ $menu->id_menu }}" class="btn btn-warning"><span class="fa fa-edit"> Edit</a>
+						<a href="/hapus_menu/{{ $menu->id_menu }}" onclick="return confirm('Yakin mau hapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"> Delete |</a>
 					</center></td>
                                 </tr>
                             @endforeach
